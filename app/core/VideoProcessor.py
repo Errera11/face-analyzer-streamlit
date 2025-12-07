@@ -26,7 +26,7 @@ class VideoProcessor:
         self.model = AutoModelForImageClassification.from_pretrained(
             "nateraw/vit-age-classifier")
     def process(self, video: bytearray):
-        result_buffer = await self.process_video(video)
+        result_buffer = self.process_video(video)
         return result_buffer
 
     def get_cropped_face(self, img, pos: Face_Rect_Type):
