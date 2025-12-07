@@ -1,4 +1,3 @@
-import cv2
 from typing import List
 import io
 import torch
@@ -6,6 +5,7 @@ from transformers import AutoImageProcessor, AutoModelForImageClassification
 from pathlib import Path
 import imageio.v2 as imageio
 import imageio.plugins.ffmpeg
+import cv2
 
 Face_Rect_Type = tuple[int, int, int, int]
 
