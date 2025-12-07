@@ -25,7 +25,7 @@ class VideoProcessor:
             "nateraw/vit-age-classifier", use_fast=True)
         self.model = AutoModelForImageClassification.from_pretrained(
             "nateraw/vit-age-classifier")
-    async def process(self, video: bytearray):
+    def process(self, video: bytearray):
         result_buffer = await self.process_video(video)
         return result_buffer
 
@@ -92,7 +92,7 @@ class VideoProcessor:
 
         return processed_img
 
-    async def process_video(self, video: bytearray):
+    def process_video(self, video: bytearray):
         video_content = video
         video_buffer = io.BytesIO(video_content)
 
