@@ -93,8 +93,6 @@ class VideoProcessor:
         return processed_img
 
     def process_video(self, video: bytearray):
-        print('Starting video processing...')
-
         video_content = video
         video_buffer = io.BytesIO(video_content)
 
@@ -129,8 +127,6 @@ class VideoProcessor:
         reader.close()
 
         output_buffer.seek(0)
-
-        print('Finished video processing...')
 
         return output_buffer
 
