@@ -10,6 +10,7 @@ def get_apt_packages():
 
 image = (
     modal.Image.debian_slim()
+    .add_local_python_source("app")
     .apt_install(*get_apt_packages())
     .pip_install_from_requirements("requirements.txt")
 )
