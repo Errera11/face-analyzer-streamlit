@@ -1,3 +1,10 @@
+fastapi
+uvicorn
+pytest
+httpx
+modal
+python-multipart
+torchvision
 streamlit==1.52.1
 torch==2.3.1
 transformers==4.57.3
