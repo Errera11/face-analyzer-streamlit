@@ -13,6 +13,8 @@ image = (
     .apt_install(*get_apt_packages())
     .pip_install_from_requirements("requirements.txt")
     .add_local_python_source("app")
+    .add_local_python_source("packages.txt")
+    .add_local_python_source("requirements.txt")
 )
 
 @app.function(image=image)
