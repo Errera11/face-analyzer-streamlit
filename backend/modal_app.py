@@ -15,7 +15,7 @@ image = (
     modal.Image.debian_slim()
     .apt_install(*apt_deps)
     .pip_install_from_requirements("requirements.txt")
-    .add_local_python_source("app")
+    .add_local_dir("app", remote_path="/root/app")
 )
 
 @app.function(image=image)
