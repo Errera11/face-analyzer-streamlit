@@ -6,7 +6,7 @@ app = modal.App("my-ai-app")
 
 image = (
     modal.Image.debian_slim()
-    .apt_install_from_file("packages.txt")
+    .apt_install("packages.txt")
     .pip_install_from_requirements("requirements.txt")
 )
 
