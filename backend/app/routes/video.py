@@ -1,7 +1,6 @@
 from fastapi import APIRouter, UploadFile, File
 from fastapi.responses import StreamingResponse
-from backend.app.services.video_processor import VideoProcessor
-import io
+from app.services.video_processor import VideoProcessor
 
 router = APIRouter()
 service = VideoProcessor()

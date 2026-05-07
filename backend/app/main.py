@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from backend.app.routes.video import router as video_router
-from backend.app.routes.health import router as health_router
+from routes.video import router as video_router
+from routes.health import router as health_router
 
 app = FastAPI()
 

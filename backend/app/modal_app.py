@@ -1,6 +1,6 @@
 import modal
 
-from backend.app.main import app as fastapi_app
+from main import app as fastapi_app
 
 app = modal.App("my-ai-app")
 
