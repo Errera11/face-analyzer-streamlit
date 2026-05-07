@@ -6,14 +6,9 @@ app = modal.App("my-ai-app")
 
 image = (
     modal.Image.debian_slim()
-    .pip_install(
-        "fastapi",
-        "uvicorn",
-        "transformers",
-        "torch"
-    )
+    .apt_install_from_file("packages.txt")
+    .pip_install_from_requirements("requirements.txt")
 )
-
 
 @app.function(image=image)
 @modal.asgi_app()
