@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from routes.video import router as video_router
-from routes.health import router as health_router
+from app.routes.video import router as video_router
+from app.routes.health import router as health_router
 
 from fastapi.middleware.cors import CORSMiddleware
 
